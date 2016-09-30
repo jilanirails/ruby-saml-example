@@ -3,7 +3,8 @@ class Account < ActiveRecord::Base
     # this is just for testing purposes.
     # should retrieve SAML-settings based on subdomain, IP-address, NameID or similar
     idp_metadata_parser = OneLogin::RubySaml::IdpMetadataParser.new
-    settings = idp_metadata_parser.parse_remote("https://app.onelogin.com/saml/metadata/590593")
+    # settings = idp_metadata_parser.parse_remote("https://app.onelogin.com/saml/metadata/590593")
+    settings = idp_metadata_parser.parse_remote("https://dev-273206.oktapreview.com/app/exk8bhuwt4gxPA65Z0h7/sso/saml/metadata")
 
 
     url_base ||= "http://localhost:3000"
