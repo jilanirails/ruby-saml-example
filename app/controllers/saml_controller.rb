@@ -14,7 +14,6 @@ class SamlController < ApplicationController
 
     request = OneLogin::RubySaml::Authrequest.new
     redirect_to(request.create(settings))
-
   end
 
   def acs
@@ -29,7 +28,7 @@ class SamlController < ApplicationController
       logger.info "NAMEID: #{response.nameid}"
       render :action => :index
     else
-      logger.info "Response Invalid. Errors: #{response.errors}"
+      logger.info "Response Invalid. Errors: #{response.errors} #{response.inspect}"
       @errors = response.errors
       render :action => :fail
     end

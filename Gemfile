@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'ruby-saml', '~> 1.3.0'
-
 gem 'byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -41,3 +39,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'ruby-saml', '1.3.1'
